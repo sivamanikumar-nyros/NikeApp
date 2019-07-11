@@ -1,0 +1,37 @@
+<%= form_with(model: men_shoe, local: true) do |form| %>
+  <% if men_shoe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(men_shoe.errors.count, "error") %> prohibited this men_shoe from being saved:</h2>
+
+      <ul>
+      <% men_shoe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image, class:'form-control-label' %>
+    <%= form.file_field :image, class:'form-control' %>
+  </div>
+  
+  <div class="form-group">
+    <div align="left"><%= form.label :men_shoe_category_id %></div>
+    <%= form.select :men_shoe_category_id, MenShoeCategory.all.pluck(:name, :id), { prompt: 'Select' }, { class: "form-control" } %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

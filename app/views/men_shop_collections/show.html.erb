@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @men_shop_collection.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @men_shop_collection.price %>
+</p>
+
+<p>
+  <strong>Men shop collection category:</strong>
+  <%= @men_shop_collection.men_shop_collection_category_id %>
+</p>
+
+<%= link_to 'Edit', edit_men_shop_collection_path(@men_shop_collection) %> |
+<%= link_to 'Back', men_shop_collections_path %>

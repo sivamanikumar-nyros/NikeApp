@@ -1,0 +1,1 @@
+json.partial! "men_shop_collection_categories/men_shop_collection_category", men_shop_collection_category: @men_shop_collection_category

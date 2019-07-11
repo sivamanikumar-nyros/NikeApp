@@ -1,0 +1,49 @@
+<header class="header-fixed">
+
+	<div class="header-limiter">
+
+		<h1><a href="#"><i class="fa fa-check bg-white" aria-hidden="true"></i><span>Nike.com</span></a></h1>
+
+		<nav>
+			<a><%= link_to 'Home', root_path %></a>
+			<a><%= link_to 'MenShoes', men_shoes_path(@men_shoes)%></a>
+			<a><%= link_to 'MenClothes', men_clothes_path(@men_clothes)%></a>
+			<a><%= link_to 'MenAccessories', men_accessories_path(@men_accessories)%></a>
+		</nav>
+
+	</div>
+
+</header>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+	$(document).ready(function(){
+
+		var showHeaderAt = 150;
+
+		var win = $(window),
+				body = $('body');
+
+		// Show the fixed header only on larger screen devices
+
+		if(win.width() > 400){
+
+			// When we scroll more than 150px down, we set the
+			// "fixed" class on the body element.
+
+			win.on('scroll', function(e){
+
+				if(win.scrollTop() > showHeaderAt) {
+					body.addClass('fixed');
+				}
+				else {
+					body.removeClass('fixed');
+				}
+			});
+
+		}
+
+	});
+
+</script>

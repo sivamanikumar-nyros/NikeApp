@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Men Shop Collection Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @men_shop_collection_categories.each do |men_shop_collection_category| %>
+      <tr>
+        <td><%= men_shop_collection_category.name %></td>
+        <td><%= link_to 'Show', men_shop_collection_category %></td>
+        <td><%= link_to 'Edit', edit_men_shop_collection_category_path(men_shop_collection_category) %></td>
+        <td><%= link_to 'Destroy', men_shop_collection_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Men Shop Collection Category', new_men_shop_collection_category_path %>

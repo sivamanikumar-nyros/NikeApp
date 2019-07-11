@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="products">
+  <h2 class="sec_title">AVAILABLE-MENS-CLOTHES-CATEGORIES</h2>
+  <div class="main_content">
+    <div class="container">
+        <% @men_clothes_categories.each_slice(3) do |group| %>
+          <div class="row specing">
+            <% group.each do |men_clothes_category|%>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 card-deck">
+                <figure class="figure-img">
+                  <div class="food_items_image">
+                    <div class="img">
+                      
+                    </div>
+                    <h3 class="food_item_name"><%= link_to men_clothes_category.name, men_clothes_path(category_id: men_clothes_category.id) %></h3>
+                  </div>
+                </figure>
+              </div>
+            <% end %>
+          </div>
+        <% end %>  
+    </div>
+  </div>
+</div>

@@ -1,0 +1,2 @@
+module MenShoeCategoriesHelper
+end

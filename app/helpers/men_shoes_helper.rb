@@ -1,0 +1,2 @@
+module MenShoesHelper
+end

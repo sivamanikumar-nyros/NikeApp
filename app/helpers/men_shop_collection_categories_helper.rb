@@ -1,0 +1,2 @@
+module MenShopCollectionCategoriesHelper
+end

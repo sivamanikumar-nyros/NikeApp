@@ -1,0 +1,2 @@
+class MenShopCollectionCategory < ApplicationRecord
+end
